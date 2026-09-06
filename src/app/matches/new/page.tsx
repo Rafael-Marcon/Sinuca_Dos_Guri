@@ -17,8 +17,8 @@ export default async function NewMatchPage({
     <div className="mx-auto flex w-full max-w-[820px] flex-col px-5 pb-12 sm:min-h-[calc(100vh-110px)] sm:justify-center sm:pb-20">
       <main className="w-full text-center">
         <h1
-          className="m-0 pt-6 pb-2 font-heading font-normal uppercase sm:pt-0"
-          style={{ fontSize: "clamp(28px,4.6vw,40px)", letterSpacing: "0.2em" }}
+          className="m-0 pt-6 pb-2 font-heading font-normal sm:pt-0"
+          style={{ fontSize: "clamp(26px,4.6vw,36px)" }}
         >
           Nova partida
         </h1>

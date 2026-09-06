@@ -18,8 +18,8 @@ export default function PlayerSelect({
       defaultValue=""
       className={
         primary
-          ? "mt-2 w-full rounded px-2.5 py-2.5 font-heading text-[17px] uppercase sm:mt-3 sm:px-3 sm:py-3.5 sm:text-[20px]"
-          : "mt-1.5 w-full rounded px-2.5 py-2 font-heading text-[14px] uppercase sm:mt-2 sm:py-3 sm:text-[16px]"
+          ? "mt-2 w-full rounded px-2.5 py-2.5 font-heading text-[16px] sm:mt-3 sm:px-3 sm:py-3.5 sm:text-[18px]"
+          : "mt-1.5 w-full rounded px-2.5 py-2 font-heading text-[14px] sm:mt-2 sm:py-3 sm:text-[15px]"
       }
       style={{
         background: "rgba(7,16,11,0.55)",
@@ -27,7 +27,6 @@ export default function PlayerSelect({
         border: primary
           ? "1px solid rgba(243,241,232,0.18)"
           : "1px solid rgba(243,241,232,0.14)",
-        letterSpacing: "0.1em",
       }}
     >
       <option value="" disabled>

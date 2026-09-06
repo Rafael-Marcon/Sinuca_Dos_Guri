@@ -48,15 +48,15 @@ export default async function Header() {
           >
             <span
               className="block h-4.5 w-4.5 shrink-0 rounded-full sm:h-[22px] sm:w-[22px]"
-              style={{ background: "linear-gradient(160deg,#18A66A,#0E5B3A)" }}
+              style={{ background: "var(--green-light)" }}
             />
-            <span className="max-w-[90px] truncate text-[12px] font-semibold tracking-[0.02em] sm:max-w-none sm:text-[13px]">
+            <span className="max-w-[90px] truncate text-[12px] font-semibold sm:max-w-none sm:text-[13px]">
               {name}
             </span>
             <form action={signOut}>
               <button
                 type="submit"
-                className="text-[11px] uppercase tracking-[0.1em] text-[var(--muted)] hover:text-[var(--text)]"
+                className="text-[12px] text-[var(--muted)] hover:text-[var(--text)]"
               >
                 Sair
               </button>

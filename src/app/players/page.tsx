@@ -26,13 +26,13 @@ export default async function PlayersPage() {
     <main className="mx-auto w-full max-w-[1000px] px-5 pb-12 sm:pb-20">
       <div className="flex flex-wrap items-baseline justify-between gap-2 pb-3 pt-5 sm:gap-4 sm:pb-6.5 sm:pt-12.5">
         <h1
-          className="m-0 font-heading font-normal uppercase"
-          style={{ fontSize: "clamp(24px,4.6vw,40px)", letterSpacing: "0.2em" }}
+          className="m-0 font-heading font-normal"
+          style={{ fontSize: "clamp(24px,4.6vw,36px)" }}
         >
           Jogadores
         </h1>
         <span
-          className="font-heading text-[10.5px] uppercase tracking-[0.18em] sm:text-[12px] sm:tracking-[0.24em]"
+          className="text-[12px] sm:text-[13px]"
           style={{ color: "var(--muted)" }}
         >
           Clique para ver o perfil
@@ -42,7 +42,7 @@ export default async function PlayersPage() {
       <div className="flex flex-col">
         {rows.map((row, i) => {
           const isTop3 = i < 3;
-          const barColor = i === 0 ? "#8A6E33,#C8A45D" : "#0E5B3A,#18A66A";
+          const barColor = i === 0 ? "var(--gold)" : "var(--green-light)";
           return (
             <Link
               key={row.id}
@@ -60,16 +60,14 @@ export default async function PlayersPage() {
                   width: 34,
                   height: 34,
                   fontSize: 15,
-                  background: isTop3
-                    ? "radial-gradient(circle at 32% 28%, #F0DFA8 0%, #C8A45D 60%, #8A6E33 100%)"
-                    : "rgba(243,241,232,0.06)",
+                  background: isTop3 ? "var(--gold)" : "rgba(243,241,232,0.06)",
                   color: isTop3 ? "#1A1408" : "var(--muted)",
                 }}
               >
                 {i + 1}
               </div>
               <div style={{ gridArea: "name", minWidth: 0 }}>
-                <div className="font-heading text-[17px] uppercase sm:text-[21px]" style={{ letterSpacing: "0.12em" }}>
+                <div className="font-heading text-[17px] sm:text-[20px]">
                   {row.name}
                 </div>
                 <div className="mt-0.5 text-[12.5px]" style={{ color: "var(--muted)" }}>
@@ -82,15 +80,15 @@ export default async function PlayersPage() {
               >
                 <div
                   className="h-full rounded-sm"
-                  style={{ width: `${row.rate}%`, background: `linear-gradient(90deg,${barColor})` }}
+                  style={{ width: `${row.rate}%`, background: barColor }}
                 />
               </div>
               <div className="text-right" style={{ gridArea: "pts" }}>
                 <div className="font-heading" style={{ fontSize: 22, color: "var(--gold)" }}>
                   {row.points}
                 </div>
-                <div className="font-heading uppercase" style={{ fontSize: 10, letterSpacing: "0.24em", color: "var(--muted)" }}>
-                  PTS
+                <div className="text-[11px]" style={{ color: "var(--muted)" }}>
+                  pts
                 </div>
               </div>
             </Link>

@@ -64,13 +64,13 @@ export default async function DestaquesPage() {
         />
         <div className="relative w-full p-4 sm:p-7.5">
           <h1
-            className="m-0 font-heading font-normal uppercase"
-            style={{ fontSize: "clamp(24px,4.6vw,44px)", letterSpacing: "0.1em", textShadow: "0 2px 18px rgba(0,0,0,0.8)" }}
+            className="m-0 font-heading font-normal"
+            style={{ fontSize: "clamp(24px,4.6vw,40px)", textShadow: "0 2px 18px rgba(0,0,0,0.8)" }}
           >
             Destaques
           </h1>
           <p
-            className="mt-1.5 font-heading text-[11px] uppercase tracking-[0.18em] sm:mt-2 sm:text-[12.5px] sm:tracking-[0.24em]"
+            className="mt-1.5 text-[13px] sm:mt-2"
             style={{ color: "var(--gold)" }}
           >
             Sequências e duplas da temporada
@@ -85,16 +85,16 @@ export default async function DestaquesPage() {
         <div
           className="rounded-[5px] px-4 py-4 sm:px-5.5 sm:py-6"
           style={{
-            border: "1px solid rgba(24,166,106,0.28)",
-            background: "linear-gradient(150deg, rgba(14,91,58,0.28), #101613 62%)",
+            borderLeft: "3px solid var(--green-light)",
+            background: "var(--surface)",
           }}
         >
-          <div className="font-heading uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "var(--green-light)" }}>
+          <div style={{ fontSize: 13, color: "var(--green-light)" }}>
             Hot streak
           </div>
           {hotStreak && hotStreak.longest_win_streak > 0 ? (
             <>
-              <div className="mt-2 font-heading uppercase sm:mt-3.5" style={{ fontSize: 26, letterSpacing: "0.12em" }}>
+              <div className="mt-2 font-heading sm:mt-3.5" style={{ fontSize: 24 }}>
                 {nameById.get(hotStreak.player_id) ?? "?"}
               </div>
               <div className="mt-1 flex items-end gap-3 sm:mt-1.5">
@@ -116,16 +116,16 @@ export default async function DestaquesPage() {
         <div
           className="rounded-[5px] px-4 py-4 sm:px-5.5 sm:py-6"
           style={{
-            border: "1px solid rgba(184,74,74,0.26)",
-            background: "linear-gradient(150deg, rgba(184,74,74,0.16), #101613 62%)",
+            borderLeft: "3px solid var(--danger)",
+            background: "var(--surface)",
           }}
         >
-          <div className="font-heading uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "var(--danger)" }}>
+          <div style={{ fontSize: 13, color: "var(--danger)" }}>
             Black streak
           </div>
           {blackStreak && blackStreak.longest_loss_streak > 0 ? (
             <>
-              <div className="mt-2 font-heading uppercase sm:mt-3.5" style={{ fontSize: 26, letterSpacing: "0.12em" }}>
+              <div className="mt-2 font-heading sm:mt-3.5" style={{ fontSize: 24 }}>
                 {nameById.get(blackStreak.player_id) ?? "?"}
               </div>
               <div className="mt-1 flex items-end gap-3 sm:mt-1.5">
@@ -147,7 +147,7 @@ export default async function DestaquesPage() {
 
       <section className="mt-6 sm:mt-11">
         <div className="flex items-baseline gap-3.5">
-          <h2 className="m-0 font-heading font-normal uppercase" style={{ fontSize: 22, letterSpacing: "0.2em" }}>
+          <h2 className="m-0 font-heading font-normal" style={{ fontSize: 20 }}>
             Duplas mais perigosas
           </h2>
           <span className="h-px flex-1" style={{ background: "rgba(200,164,93,0.16)" }} />
@@ -162,8 +162,7 @@ export default async function DestaquesPage() {
           {duplas.map((d) => {
             const nameA = nameById.get(d.player_a) ?? "?";
             const nameB = nameById.get(d.player_b) ?? "?";
-            const barColor =
-              d.win_rate >= 60 ? "#0E5B3A,#18A66A" : "#8A6E33,#C8A45D";
+            const barColor = d.win_rate >= 60 ? "var(--green-light)" : "var(--gold)";
             return (
               <div
                 key={`${d.player_a}-${d.player_b}`}
@@ -173,7 +172,7 @@ export default async function DestaquesPage() {
                 }}
               >
                 <div style={{ gridArea: "name", minWidth: 0 }}>
-                  <div className="font-heading uppercase" style={{ fontSize: 18, letterSpacing: "0.1em" }}>
+                  <div className="font-heading" style={{ fontSize: 17 }}>
                     {nameA} + {nameB}
                   </div>
                   <div className="mt-0.5 text-[12.5px]" style={{ color: "var(--muted)" }}>
@@ -186,15 +185,12 @@ export default async function DestaquesPage() {
                 >
                   <div
                     className="h-full rounded-sm"
-                    style={{
-                      width: `${d.win_rate}%`,
-                      background: `linear-gradient(90deg,${barColor})`,
-                    }}
+                    style={{ width: `${d.win_rate}%`, background: barColor }}
                   />
                 </div>
                 <div
                   className="min-w-[62px] text-right font-heading"
-                  style={{ gridArea: "pts", fontSize: 22, letterSpacing: "0.06em", color: "var(--gold)" }}
+                  style={{ gridArea: "pts", fontSize: 20, color: "var(--gold)" }}
                 >
                   {d.win_rate}%
                 </div>

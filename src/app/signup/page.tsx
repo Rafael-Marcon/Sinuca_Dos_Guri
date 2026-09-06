@@ -58,7 +58,7 @@ export default async function SignupPage({
           className="rounded-[3px] px-4 py-2.5 font-heading uppercase tracking-[0.2em] text-[var(--gold)]"
           style={{
             border: "1px solid var(--gold)",
-            background: "linear-gradient(180deg, rgba(200,164,93,0.16), rgba(200,164,93,0.04))",
+            background: "none",
           }}
         >
           Cadastrar

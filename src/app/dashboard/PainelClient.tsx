@@ -99,17 +99,16 @@ export default function PainelClient({
         />
         <div className="relative flex w-full flex-wrap items-end justify-between gap-2 px-4 pb-3.5 pt-4 sm:gap-4 sm:px-7.5 sm:pb-7 sm:pt-8.5">
           <h1
-            className="m-0 font-heading font-normal uppercase"
+            className="m-0 font-heading font-normal"
             style={{
-              fontSize: "clamp(24px,5vw,50px)",
-              letterSpacing: "0.06em",
+              fontSize: "clamp(24px,5vw,44px)",
               textShadow: "0 2px 18px rgba(0,0,0,0.8)",
             }}
           >
             Temporada 2026
           </h1>
           <span
-            className="font-heading text-[11px] uppercase tracking-[0.18em] sm:text-[13px] sm:tracking-[0.24em]"
+            className="text-[12px] sm:text-[13px]"
             style={{ color: "var(--gold)" }}
           >
             {matchesCount} partidas • atualizado hoje
@@ -118,18 +117,18 @@ export default function PainelClient({
       </div>
 
       <section
-        className="felt-texture relative mt-3 overflow-hidden rounded-md sm:mt-8.5"
+        className="relative mt-3 overflow-hidden rounded-md sm:mt-8.5"
         style={{
           border: "1px solid rgba(200,164,93,0.16)",
-          background: "linear-gradient(180deg,#101613 0%,#0B100D 100%)",
+          background: "var(--surface)",
         }}
       >
         <div
           className="relative flex flex-wrap items-center justify-center gap-3 px-3 pb-2 pt-4 sm:gap-4 sm:px-6.5 sm:pt-8.5"
         >
           <span
-            className="font-heading uppercase"
-            style={{ fontSize: 12, letterSpacing: "0.34em", color: "var(--gold)" }}
+            className="font-heading"
+            style={{ fontSize: 13, color: "var(--gold)" }}
           >
             Pódio
           </span>
@@ -141,7 +140,7 @@ export default function PainelClient({
               <button
                 key={p}
                 onClick={() => setPeriod(p)}
-                className="rounded-full px-4 py-1.5 font-heading text-[11px] uppercase tracking-[0.2em]"
+                className="rounded-full px-4 py-1.5 text-[13px] font-medium"
                 style={
                   period === p
                     ? { background: "var(--green)", color: "var(--text)" }
@@ -164,22 +163,22 @@ export default function PainelClient({
         {stats.map((s) => (
           <div
             key={s.label}
-            className="felt-texture relative overflow-hidden rounded-[5px] px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5.5"
+            className="rounded-[5px] px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5.5"
             style={{ border: "1px solid rgba(243,241,232,0.08)", background: "var(--surface)" }}
           >
             <div
-              className="relative font-heading uppercase"
-              style={{ fontSize: 11, letterSpacing: "0.28em", color: "var(--muted)" }}
+              className="text-[12.5px]"
+              style={{ color: "var(--muted)" }}
             >
               {s.label}
             </div>
             <div
-              className="relative mt-2 font-heading text-[32px] font-normal sm:mt-4 sm:text-[46px]"
+              className="mt-2 font-heading text-[32px] font-normal sm:mt-4 sm:text-[42px]"
               style={{ lineHeight: 1.1 }}
             >
               {s.value}
             </div>
-            <div className="relative text-[12.5px]" style={{ color: "var(--muted)" }}>
+            <div className="text-[12.5px]" style={{ color: "var(--muted)" }}>
               {s.sub}
             </div>
           </div>

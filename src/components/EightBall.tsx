@@ -8,12 +8,11 @@ export default function EightBall({ size = 38 }: { size?: number }) {
         width: size,
         height: size,
         borderRadius: "50%",
-        background: "radial-gradient(circle at 32% 28%, #3A3F3B 0%, #0C0F0D 70%)",
+        background: "#14201A",
         border: "1px solid rgba(243,241,232,0.14)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        boxShadow: "0 6px 18px rgba(0,0,0,0.6)",
         flexShrink: 0,
       }}
     >

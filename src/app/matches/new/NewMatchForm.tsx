@@ -14,10 +14,9 @@ function ModeButton({
   return (
     <button
       type="button"
-      className="rounded-full px-4.5 py-2 font-heading sm:px-6.5 sm:py-2.5"
+      className="rounded-full px-4.5 py-2 font-medium sm:px-6.5 sm:py-2.5"
       style={{
-        fontSize: 13,
-        letterSpacing: "0.22em",
+        fontSize: 14,
         background: active ? "var(--green)" : "none",
         color: active ? "var(--text)" : "var(--muted)",
       }}
@@ -36,12 +35,10 @@ function WinnerButton({
   return (
     <button
       type="button"
-      className="mt-2 w-full rounded py-2 font-heading uppercase sm:mt-3 sm:py-3"
+      className="mt-2 w-full rounded py-2 text-[13px] font-medium sm:mt-3 sm:py-3"
       style={{
-        fontSize: 11.5,
-        letterSpacing: "0.26em",
         border: active ? "1px solid var(--green-light)" : "1px solid rgba(243,241,232,0.16)",
-        background: active ? "rgba(24,166,106,0.22)" : "rgba(7,16,11,0.35)",
+        background: active ? "rgba(24,166,106,0.18)" : "rgba(7,16,11,0.35)",
         color: active ? "var(--text)" : "var(--muted)",
       }}
       {...props}
@@ -78,17 +75,11 @@ export default function NewMatchForm({ players }: { players: Player[] }) {
 
       <div
         className="mt-4 w-full rounded-xl p-2 sm:mt-8 sm:p-3.5"
-        style={{
-          background: "linear-gradient(160deg,#4A2C18,#2E1A0E)",
-          boxShadow: "0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.08)",
-        }}
+        style={{ background: "#3A2312" }}
       >
         <div
-          className="felt-texture relative overflow-hidden rounded-md px-4 py-5 sm:px-6.5 sm:py-8.5"
-          style={{
-            background: "radial-gradient(120% 90% at 50% 0%, #14724A 0%, #0E5B3A 55%, #0A4229 100%)",
-            boxShadow: "inset 0 0 60px rgba(0,0,0,0.45)",
-          }}
+          className="relative overflow-hidden rounded-md px-4 py-5 sm:px-6.5 sm:py-8.5"
+          style={{ background: "#0E5B3A" }}
         >
           {[
             { left: 10, top: 10 },
@@ -118,8 +109,8 @@ export default function NewMatchForm({ players }: { players: Player[] }) {
                   }}
                 />
                 <span
-                  className="font-heading uppercase"
-                  style={{ fontSize: 11, letterSpacing: "0.28em", color: "rgba(243,241,232,0.72)" }}
+                  className="text-[13px] font-medium"
+                  style={{ color: "rgba(243,241,232,0.8)" }}
                 >
                   Lado A
                 </span>
@@ -144,8 +135,8 @@ export default function NewMatchForm({ players }: { players: Player[] }) {
                   }}
                 />
                 <span
-                  className="font-heading uppercase"
-                  style={{ fontSize: 11, letterSpacing: "0.28em", color: "rgba(243,241,232,0.72)" }}
+                  className="text-[13px] font-medium"
+                  style={{ color: "rgba(243,241,232,0.8)" }}
                 >
                   Lado B
                 </span>
@@ -167,14 +158,13 @@ export default function NewMatchForm({ players }: { players: Player[] }) {
       <button
         type="submit"
         disabled={!winner}
-        className="mt-4 rounded-[3px] px-8 py-3.5 font-heading uppercase sm:mt-6.5 sm:px-[46px] sm:py-[17px]"
+        className="mt-4 rounded-[3px] px-8 py-3.5 font-medium sm:mt-6.5 sm:px-[46px] sm:py-[17px]"
         style={{
           whiteSpace: "nowrap",
           border: "1px solid var(--gold)",
-          background: "linear-gradient(180deg, rgba(200,164,93,0.16), rgba(200,164,93,0.04))",
+          background: "none",
           color: "var(--gold)",
           fontSize: 15,
-          letterSpacing: "0.3em",
           opacity: winner ? 1 : 0.5,
         }}
       >

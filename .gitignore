@@ -46,3 +46,6 @@ next-env.d.ts
 /design_handoff_sinuca_ui/
 /AGENTS.md
 /CLAUDE.md
+
+.vercel
+.env*

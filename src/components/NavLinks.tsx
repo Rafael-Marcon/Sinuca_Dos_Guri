@@ -23,14 +23,10 @@ export default function NavLinks() {
           <Link
             key={item.href}
             href={item.href}
-            className="shrink-0 whitespace-nowrap rounded-[3px] px-3 py-2 font-heading text-[11.5px] uppercase tracking-[0.16em] transition-colors sm:px-4 sm:py-2.5 sm:text-[12.5px] sm:tracking-[0.2em]"
+            className="shrink-0 whitespace-nowrap rounded-[3px] px-3 py-2 text-[13.5px] font-medium transition-colors sm:px-4 sm:py-2.5"
             style={
               active
-                ? {
-                    background: "rgba(200,164,93,0.12)",
-                    color: "var(--gold)",
-                    boxShadow: "inset 0 -1px 0 var(--gold)",
-                  }
+                ? { background: "rgba(200,164,93,0.12)", color: "var(--gold)" }
                 : { color: "var(--muted)" }
             }
           >

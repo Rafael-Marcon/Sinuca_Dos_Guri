@@ -53,8 +53,8 @@ export default async function PlayerProfilePage({
       <div className="pt-4 text-left sm:pt-8.5">
         <Link
           href="/players"
-          className="font-heading uppercase"
-          style={{ fontSize: 12, letterSpacing: "0.24em", color: "var(--muted)" }}
+          className="text-[13px]"
+          style={{ color: "var(--muted)" }}
         >
           ← Jogadores
         </Link>
@@ -62,27 +62,17 @@ export default async function PlayerProfilePage({
 
       <main className="w-full sm:flex sm:flex-1 sm:flex-col sm:justify-center">
       <div className="relative mt-3 sm:mt-6.5">
-        <div
-          className="pointer-events-none absolute left-1/2 -translate-x-1/2"
-          style={{
-            top: -30,
-            width: 220,
-            height: 220,
-            borderRadius: "50%",
-            background: "radial-gradient(circle at 34% 28%, rgba(243,241,232,0.06) 0%, rgba(8,11,9,0) 66%)",
-          }}
-        />
         <div className="relative mx-auto flex justify-center">
           <EightBall size={44} />
         </div>
         <h1
-          className="m-0 mt-3 font-heading font-normal uppercase sm:mt-4.5"
-          style={{ fontSize: "clamp(30px,7vw,58px)", letterSpacing: "0.14em", lineHeight: 1 }}
+          className="m-0 mt-3 font-heading font-normal sm:mt-4.5"
+          style={{ fontSize: "clamp(28px,7vw,50px)", lineHeight: 1 }}
         >
           {profile.name}
         </h1>
-        <div className="mt-1.5 font-heading text-[14px] tracking-[0.24em] sm:mt-2.5 sm:text-[17px] sm:tracking-[0.3em]" style={{ color: "var(--gold)" }}>
-          {points} PONTOS
+        <div className="mt-1.5 text-[15px] sm:mt-2.5 sm:text-[16px]" style={{ color: "var(--gold)" }}>
+          {points} pontos
         </div>
       </div>
 
@@ -97,7 +87,7 @@ export default async function PlayerProfilePage({
           <div className="font-heading text-[24px] sm:text-[38px]">
             {wins}
           </div>
-          <div className="font-heading uppercase" style={{ fontSize: 9.5, letterSpacing: "0.18em", color: "var(--muted)" }}>
+          <div className="text-[11.5px]" style={{ color: "var(--muted)" }}>
             Vitórias
           </div>
         </div>
@@ -105,7 +95,7 @@ export default async function PlayerProfilePage({
           <div className="font-heading text-[24px] sm:text-[38px]">
             {matches}
           </div>
-          <div className="font-heading uppercase" style={{ fontSize: 9.5, letterSpacing: "0.18em", color: "var(--muted)" }}>
+          <div className="text-[11.5px]" style={{ color: "var(--muted)" }}>
             Partidas
           </div>
         </div>
@@ -113,7 +103,7 @@ export default async function PlayerProfilePage({
           <div className="font-heading text-[24px] sm:text-[38px]" style={{ color: "var(--green-light)" }}>
             {rate}%
           </div>
-          <div className="font-heading uppercase" style={{ fontSize: 9.5, letterSpacing: "0.18em", color: "var(--muted)" }}>
+          <div className="text-[11.5px]" style={{ color: "var(--muted)" }}>
             Aproveitamento
           </div>
         </div>
@@ -127,7 +117,7 @@ export default async function PlayerProfilePage({
           className="rounded-[5px] p-4 sm:p-5.5"
           style={{ border: "1px solid rgba(24,166,106,0.24)", background: "var(--surface)" }}
         >
-          <div className="font-heading uppercase" style={{ fontSize: 10.5, letterSpacing: "0.28em", color: "var(--green-light)" }}>
+          <div className="text-[13px]" style={{ color: "var(--green-light)" }}>
             Maior sequência
           </div>
           <div className="mt-1.5 font-heading text-[24px] sm:mt-2.5 sm:text-[30px]">
@@ -138,12 +128,12 @@ export default async function PlayerProfilePage({
           className="rounded-[5px] p-4 sm:p-5.5"
           style={{ border: "1px solid rgba(200,164,93,0.24)", background: "var(--surface)" }}
         >
-          <div className="font-heading uppercase" style={{ fontSize: 10.5, letterSpacing: "0.28em", color: "var(--gold)" }}>
+          <div className="text-[13px]" style={{ color: "var(--gold)" }}>
             Melhor dupla
           </div>
           {bestDuo ? (
             <>
-              <div className="mt-2.5 font-heading uppercase" style={{ fontSize: 20, letterSpacing: "0.08em" }}>
+              <div className="mt-2.5 font-heading" style={{ fontSize: 19 }}>
                 {profile.name} + {bestDuoPartnerName}
               </div>
               <div className="mt-1 text-[13px]" style={{ color: "var(--muted)" }}>
